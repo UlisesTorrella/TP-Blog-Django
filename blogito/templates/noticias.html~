@@ -1,0 +1,114 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui-1.11.4.custom/jquery-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui-1.11.4.custom/jquery-ui.theme.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+<div class="jumbotron">
+    <h1>Ulises Blog</h1>
+    <p>coso...  </p> 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html" class="fa fa-home">  Home</a></li>
+        <li class="active"><a href="noticias.html" class="fa fa-newspaper-o" >  Noticias</a></li>
+        <li><a href="curriculum.html" class="fa fa-suitcase">  Curriculum</a></li> 
+        <li><a href="contactanos.html" class="fa fa-inbox">  Contactanos</a></li>
+        <li><a href="calculadora.html"class="fa fa-calculator">  Calculadora</a></li>
+        <li><a href="pregunta.html" class="fa fa-question">  Pregunta</a></li> 
+        <li><a href="imagenes.html" class="fa fa-picture-o">  Imagenes</a></li> 
+        <li><a href="conversor.html" class="fa fa-money">  Conversor</a></li>
+        <li><a href="cronometro.html" class="fa fa-clock-o">  Cronometro</a></li>
+        <li></li>
+      </ul>
+    </div>
+    </div>
+</nav>
+    <div class="container">
+            <ul style="list-style-type:none">
+        <li><div class="noticia">
+            <div class="imagen" style="float: left;width:20%;">
+                <img src="{% static 'css/Images/linceSalto.jpg' %}"  width='200' height='150'>
+            </div>
+            <div style="float: right;width:75%;">
+                <h2>Lince News</h>
+                <p id="first"> La Consejeria de Medio Ambiente y Ordenacion del Territorio recibe este jueves el premio Reino de Jaen-La Campina por los esfuerzos encaminados a la proteccion del lince iberico (Lynx pardinus) en Andalucia, y especialmente en el Parque Natural Sierra de Andujar (Jaen), habitat natural de esta especie que se encuentra actualmente en peligro critico de extincion.
+                </p>
+            </div>
+
+        </div>
+        </li>
+        <li><div class="noticia">
+            <div class="imagen" style="float: left;width:20%;">
+                <img src="css/Images/linceSalto.jpg" width='200' height='150'>
+            </div>
+            <div style="float: right;width:75%;">
+                <h2>Titulo de noticia</h>
+                <p class="noticias"> Cras vel cursus purus. Mauris facilisis nulla sed pretium tristique. Aliquam eleifend metus consequat nunc finibus eleifend. Donec varius dui ac nibh hendrerit, a molestie ante porttitor. Morbi maximus, lectus quis elementum accumsan, felis enim ultricies ante, ac rhoncus mi nisi a leo. Integer blandit vehicula urna, eu sodales tellus rutrum at. Sed cursus justo neque, rhoncus vestibulum nisl commodo vel. Fusce sollicitudin commodo ex, nec laoreet nisl malesuada iaculis. Aliquam vestibulum fringilla tempus.
+                </p>
+            </div>
+
+        </div>
+        </li>
+            </li>
+        <li>
+        <div class="noticia">
+            <div class="imagen" style="float: left;width:20%;">
+                <img src="css/Images/linceSalto.jpg" width='200' height='150'>
+            </div>
+            <div style="float: right;width:75%;">
+                <h2>Titulo de noticia</h>
+                <p class="noticias">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet mattis libero. Maecenas odio leo, posuere id pretium sed, luctus a erat. Integer vehicula ullamcorper facilisis. Integer non augue metus. Curabitur congue eget velit gravida molestie. Nam dapibus gravida suscipit. Fusce a porttitor tortor. Aliquam facilisis sem massa, in luctus felis vehicula quis. Phasellus id enim commodo, varius ex vitae, eleifend ipsum. Mauris id vestibulum nulla.
+                </p>
+            </div>
+
+        </div>
+        </li>
+        <li>
+        <div class="noticia">
+            <div class="imagen" style="float: left;width:20%;">
+                <img src="css/Images/linceSalto.jpg" width='200' height='150'>
+            </div>
+            <div style="float: right;width:75%;">
+                <h2>Titulo de noticia</h>
+                <p class="noticias">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet mattis libero. Maecenas odio leo, posuere id pretium sed, luctus a erat. Integer vehicula ullamcorper facilisis. Integer non augue metus. Curabitur congue eget velit gravida molestie. Nam dapibus gravida suscipit. Fusce a porttitor tortor. Aliquam facilisis sem massa, in luctus felis vehicula quis. Phasellus id enim commodo, varius ex vitae, eleifend ipsum. Mauris id vestibulum nulla.
+                </p>
+            </div>
+
+        </div>
+        </li>
+        <li>
+        <div class="noticia">
+            <div class="imagen" style="float: left;width:20%;">
+                <img src="css/Images/linceSalto.jpg" width='200' height='150'>
+            </div>
+            <div style="float: right;width:75%;">
+                <h2>Titulo de noticia</h>
+                <p class="noticias">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet mattis libero. Maecenas odio leo, posuere id pretium sed, luctus a erat. Integer vehicula ullamcorper facilisis. Integer non augue metus. Curabitur congue eget velit gravida molestie. Nam dapibus gravida suscipit. Fusce a porttitor tortor. Aliquam facilisis sem massa, in luctus felis vehicula quis. Phasellus id enim commodo, varius ex vitae, eleifend ipsum. Mauris id vestibulum nulla.
+                </p>
+            </div>
+
+        </div>
+        </li>
+        
+    </ul>
+
+            </div>
+    </div>
+</div>
+    
+</body>
+    
+</html>

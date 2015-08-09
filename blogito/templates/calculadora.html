@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+            <div id="Calculadora" class="col-md-4 col-md-offset-5" >
+            <input type="text"  id="pantallita" value="" /> <br/>
+            <input type="button" class="btnCalc" id="btn1" onclick="ejecutar(this);" value="1"/>
+            <input type="button" class="btnCalc" id="btn2" onclick="ejecutar(this);" value="2"/>
+            <input type="button" class="btnCalc" id="btn3" onclick="ejecutar(this);" value="3"/>
+            <input type="button" class="btnCalc" id="btnMas" onclick="ejecutar(this);" value="+"/>
+            <br/>
+            <input type="button" class="btnCalc" id="btn4" onclick="ejecutar(this);" value="4"/>
+            <input type="button" class="btnCalc" id="btn5" onclick="ejecutar(this);" value="5"/>
+            <input type="button" class="btnCalc" id="btn6" onclick="ejecutar(this);" value="6"/>
+            <input type="button" class="btnCalc" id="btnMenos" onclick="ejecutar(this);" value="-"/>
+            <br/>
+            <input type="button" class="btnCalc" id="btn7" onclick="ejecutar(this);" value="7"/>
+            <input type="button" class="btnCalc" id="btn8" onclick="ejecutar(this);" value="8"/>
+            <input type="button" class="btnCalc" id="btn9" onclick="ejecutar(this);" value="9"/>
+            <input type="button" class="btnCalc" id="btnPor" onclick="ejecutar(this);" value="*"/>
+            <br/>
+            <input type="button" class="btnCalc" id="btnP" onclick="ejecutar(this);" value="."/>
+            <input type="button" class="btnCalc" id="btn0" onclick="ejecutar(this);" value="0"/>
+            <input type="button" class="btnCalc" id="btnR" onclick="ejecutar(this);" value="="/>
+            <input type="button" class="btnCalc" id="btnDividir" onclick="ejecutar(this);" value="/"/>
+        </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var availableTags = ["Noticias","Curriculum","Contactanos","Calculadora","Conversor","Pregunta","Imagenes","Cronometro"
+    ];       
+        
+    isLast = false;
+        
+    function ejecutar(jose){
+            value = jose.value;
+            pant = document.getElementById("pantallita");
+            console.log(value);
+            if(value != "="){
+                pant.style.textAlign= "left";
+                if(isLast){
+                    pant.setAttribute("value",value);
+                }else{
+                    valPant = document.getElementById("pantallita").value;
+                    pant.setAttribute("value",valPant+value);
+                }
+
+                isLast=false;
+            }
+            if(value == "="){
+                valPant = document.getElementById("pantallita").value;
+                pant.setAttribute("value",eval(valPant));
+                pant.style.textAlign= "right";
+                isLast=true;
+            }
+        }
+    $( "#btnBusqueda" ).click(function() {
+        direccion = $("#busqueda").val();
+        window.location.href = direccion+".html";
+    });
+    </script>
+{% endblock %}

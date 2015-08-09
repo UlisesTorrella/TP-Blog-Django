@@ -1,0 +1,269 @@
+<style>
+
+a{
+    color:grey;
+    text-decoration: none;
+}
+
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+/* Content */
+.content {
+    padding-top: 30px;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: medium none;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px;
+    position: relative;
+}
+.testimonials blockquote::before {
+    width: 0; 
+    height: 0;
+    right: 0;
+    bottom: 0;
+    content: " "; 
+    display: block; 
+    position: absolute;
+    border-bottom: 20px solid #fff;    
+    border-right: 0 solid transparent;
+    border-left: 15px solid transparent;
+    border-left-style: inset; /*FF fixes*/
+    border-bottom-style: inset; /*FF fixes*/
+}
+.testimonials blockquote::after {
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #e63f0c transparent transparent transparent;
+}
+.testimonials .carousel-info img {
+    border: 1px solid #f5f5f5;
+    border-radius: 150px !important;
+    height: 75px;
+    padding: 3px;
+    width: 75px;
+}
+.testimonials .carousel-info {
+    overflow: hidden;
+}
+.testimonials .carousel-info img {
+    margin-right: 15px;
+}
+.testimonials .carousel-info span {
+    display: block;
+}
+.testimonials span.testimonials-name {
+    color: #e6400c;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 23px 0 7px;
+}
+.testimonials span.testimonials-post {
+    color: #656565;
+    font-size: 12px;
+}
+
+body{
+    height: 100%;
+}
+
+input[type='button'].btnCalc{
+    width:23%;
+    height: 30px;
+}
+
+div.jumbotron{
+ background-color: darkgrey;
+}
+body{
+    background-color: lavender;
+}
+#pantallita{
+    height: 40px;
+    width: 100%;
+    font-size: 35;
+}
+
+.coso{
+    width:32%;
+    height:32%;
+    float:left;
+    border-style: solid;
+    text-align: center;
+    border-color: black;
+}
+
+
+
+
+#Calculadora{
+    padding-top: 40px;
+    margin-right: 41%;
+    margin-left: 42%;
+}
+
+
+
+#MoneyConvert{
+    padding-top: 40px;
+    margin-right: 31%;
+    margin-left: 32%;
+}
+
+#no{
+    background-image:url("btnNO.png") no-repeat;
+    float: inherit;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top:0%;
+    margin-left:0%;
+}
+#yes{
+    background-image:url("btnYES.png") no-repeat;
+    position: relative;
+    float: left;
+    
+    width: 100px;
+    height: 100px;
+    top:35%;
+    left:80%;
+}
+
+ul.nav{
+    list-style-type: none;
+    padding-left: 0px;
+    text-align: center;
+}
+
+div#imagen{
+    overflow:hidden;   
+}
+
+.item:hover {
+    border-style: ridge;
+    border-color: grey;
+    background-color:lightgrey;
+    
+}
+
+.cronButton{
+    width: 173px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.avoid-clicks {
+  pointer-events: none;
+}
+
+div.header {
+    /*background-color: lightblue;
+    background-image: url("Images/header.png");*/
+    padding:5px;
+    background-color: white;
+}
+
+div.header:active{
+    border-style: ridge;
+    border-color: lightgrey;
+}
+
+imgCurriculum{
+    background-image: url("Images/lince.jpg");
+}
+
+.logo{
+    left: 10px;   
+}
+
+.item{
+    color: black;
+    align-text: center;
+}
+
+#btnBusqueda{
+    /*background-image:url(/Images/lupita.jpg) no-repeat;*/
+    width:30px;
+    height: 30px;
+    vertical-align: bottom;
+
+}
+
+progress    {
+    margin-left:21%;  
+    width: 900;
+    height: 20;
+}
+
+div.section {
+    background-color: #ADD8E6;
+    width:77%;
+    float:left;
+
+}
+
+#contactanos{
+    background-color: #ADD8E6;
+    width:50%;
+    float:left;
+}
+
+p.noticias{
+    color:grey;
+    text-align: left;
+    font-family:sans-serif;
+}
+
+h1.title{
+    font-family: fantasy;
+}
+
+p#index{
+    text-align: center;
+    font-family:monospace;
+}
+
+p#first{
+    color:black;
+    text-align: left;
+    font-family:cursive;
+}
+
+#cronometro{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#p1{
+    width: 173px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+
+div.noticia{
+    float:left;
+}
+/*#footer {
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}*/
+</style>

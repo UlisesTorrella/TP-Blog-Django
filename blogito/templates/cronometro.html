@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+            <input id="cronometro" value=0></input><br/>
+            <input type="button" class="cronButton" id="btnIniciar" onclick="iniciar()" value="Inicio"/><br/>
+            <input type="button" class="cronButton" id="btnPausa" onclick="pausa()" value="Pausa"/><br/>
+            <input type="button" class="cronButton" id="btnTerminar" onclick="terminar()" value="Parar"/><br/>
+            <input type="button" class="cronButton" id="btnVuelta" onclick="vuelta()" value="Vuelta"/><br/>
+            <p id="p1"> </p>
+{% endblock %}
+{% block script %}
+<script>
+    hrs=0;
+    min=0;
+    seg=0;
+    mseg=0;
+    function horas(){
+        hrs+=1;
+    }
+    function minutos() {
+        min+=1;
+        if(min>59){
+            min=0;
+        }        
+        
+    }
+    function segundos(){
+        seg+=1;
+        if(seg>59){
+            seg=0;
+        }        
+
+    }
+    function milisegundos(){
+        mseg+=1;
+        if(mseg>99){
+            mseg=0;
+        }
+        document.getElementById("cronometro").setAttribute("value",hrs+":"+min+":"+seg+":"+mseg);
+    }
+    
+    var h;
+    var m;
+    var s;
+    var ms;
+    
+        
+    estado = 0;
+    function iniciar(){
+        if(estado==0){
+            terminar();
+            document.getElementById("p1").innerHTML = "";
+        }
+
+        h=setInterval(function () {horas()}, 3600000);
+        m=setInterval(function () {minutos()}, 60000);
+        s=setInterval(function () {segundos()}, 1000);
+        ms=setInterval(function () {milisegundos()}, 1);
+    }
+    function pausa(){
+        clearInterval(h);
+        clearInterval(m);
+        clearInterval(s);
+        clearInterval(ms);
+        document.getElementById("btnIniciar").setAttribute("value","Renaudar");
+        estado=1;
+    }
+    function terminar(){
+        window.clearInterval(h);
+        window.clearInterval(m);
+        window.clearInterval(s);
+        window.clearInterval(ms);
+        hrs=0;
+        min=0;
+        seg=0;
+        mseg=0;
+        document.getElementById("cronometro").setAttribute("value",hrs+":"+min+":"+seg+":"+mseg);
+        document.getElementById("btnIniciar").setAttribute("value","Iniciar");
+        estado=0;
+    }
+    function vuelta(){
+        valor = document.getElementById("cronometro").getAttribute("value");
+        console.log(valor);
+        valor = valor + "<br/>";
+        document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML+valor;       
+    }
+</script>
+{% endblock %}

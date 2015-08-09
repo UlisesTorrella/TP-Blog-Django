@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+            <h1>R U GAY?</h1>
+            <input onmouseover="mover(this)" type="image" id="no" src="{% static 'css/Images/btnNO.png' %}"/>
+            <input onclick="gaaay()" type="image" id="yes" src="{% static 'css/Images/btnYES.png' %}"/>
+{% endblock %}
+    
+{% block script %}
+<script>
+        posicion=0;
+        function mover(elm){
+            boton = document.getElementById("no");
+            switch(posicion){
+                    case 0:boton.setAttribute('style', 'margin-top:20%;'); posicion=1;break;
+                    case 1:boton.setAttribute('style', 'margin-top:20%; left:70%;'); posicion=2; break;
+                    case 2:boton.setAttribute('style', 'margin-top:20%; left:0%;'); posicion= 3;break;
+                    case 3:boton.setAttribute('style', 'margin-top:0%;'); posicion=0;break;
+                    default:;
+            }
+        }
+
+        function gaaay(){
+            alert("JA! GAAAAAAAY    ");
+        }
+    </script>   
+{% endblock %}

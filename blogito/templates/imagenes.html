@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+            <img id="Cuadro" width='900' height='450' src="{% static 'css/img/img3.jpg' %}">
+            <progress  id="pb" value="0" max="100" style="float: left; margin-left:0px;" />
+{% endblock %}
+
+{% block script %}
+<script>
+        setInterval(function () {cambiarFoto()}, 5000);
+        setInterval(function () {avancePb()}, 50);
+        actual=5;
+        function avancePb(){
+            progress=document.getElementById("pb");
+            progress.value = progress.value+1;
+        }
+        function cambiarFoto() {
+            console.log("antes");
+            numero = Math.floor((Math.random() * 10)+1);
+            while(actual==numero){
+                numero = Math.floor((Math.random() * 10)+1);
+            }
+            document.getElementById("Cuadro").setAttribute("src","{% static 'css/img/img' %}"+numero+'.jpg');
+            progress=document.getElementById("pb");
+            progress.value = 0;
+            actual=numero;
+            console.log("despues");
+        }
+        </script>
+
+{% endblock %}

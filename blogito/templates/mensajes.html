@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+{% for comentario in comentarios %}
+
+            <div class="testimonials">
+                <div class="active item">
+                  <blockquote><h4 style="color:black;">{{comentario.mensaje}}</h4></blockquote>
+                  <div class="carousel-info">
+                    <img alt="" src="{% static 'css/Images/lince.jpg' %}" class="pull-left">
+                    <div class="pull-left">
+                      <span class="testimonials-name">{{comentario.autor}}</span>
+                      <span class="testimonials-date">{{comentario.fecha}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+{% endfor %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="col-md-10 col-md-offset-0">
+            <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% for s in selected %}
+                {{s.nombre}}
+                {% endfor %} {{seleccionado}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                {% for categoria in categorias %}
+                <li><a title='{{categoria.descripcion}}' href="{% url 'app_blog:show_categoria' categoria.id %}">{{categoria.nombre}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% if no_noticias %}
+                <img width='100%' height='70%' src="{% static 'css/Images/nonoticias.png' %}">
+            {% else %}
+                <ul style="list-style-type:none">
+                {% for noticia in noticias %}
+                <li>
+                <div "{% url 'app_blog:show_post' noticia.id %}" class="post-preview">
+                        <h2  class="post-title"><a href="{% url 'app_blog:show_post' noticia.id %}">
+                            {{ noticia.titulo}}</a>
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{noticia.descripcion}}
+                        </h3>
+                </div>
+                </li>
+                {% endfor %}
+                </ul>  
+            {% endif %}
+        
+
+            </div>
+    </div>
+</div>
+{% endblock %}

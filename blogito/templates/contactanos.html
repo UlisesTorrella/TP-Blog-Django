@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<form action="{% url 'app_blog:mail' %}" method="POST" name="sentMessage" id="contactForm">
+	{% csrf_token %}
+        <div class="form-group">
+			  <label for="usr">Mail:</label>
+			  <input type="text" class="form-control" name="mail" id="mail">
+		</div>
+		<div class="form-group">
+			  <label for="pwd">Asunto:</label>
+			  <input type="text" id="asunto"class="form-control" name="asunto">
+		</div>
+		 <div class="form-group">
+		  <label for="comment">Mensaje:</label>
+		  <textarea class="form-control" rows="5" id="mensaje" name="mensaje"></textarea>
+		</div>
+		<input type="submit" id="send"value="Submit">
+	</form>
+{% endblock %}
+
+{% block script %}
+<script>
+	
+</script>
+{% endblock %}
